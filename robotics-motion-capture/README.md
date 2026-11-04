@@ -37,3 +37,6 @@ Sovrano AI – Robotics Motion Capture
 This documentation describes my experience and demonstrates motion annotation concepts through illustrative examples.
 
 *Note: The sample description is illustrative and does not contain confidential project data.*
+## Visual Demonstration
+
+![Robotics Motion Capture Sample](robotics-motion-capture-sample.png)
