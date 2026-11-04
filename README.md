@@ -50,3 +50,6 @@ Interested in contributing to AI training, machine learning, and data evaluation
 
 - LinkedIn: [Atmansyah Lubis](https://linkedin.com/in/atmansyah-lubis-669543173)
 - Portfolio: [Remotenesia](https://remotenesia7.wordpress.com/)
+- ## Visual Demonstration
+
+![Egocentric Video Annotation Sample](egocentric_annotation_demo.png)
