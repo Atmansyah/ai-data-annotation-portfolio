@@ -30,3 +30,8 @@ The objective was to identify and annotate parking spaces and relevant objects i
 - Data Quality Assessment
 - Attention to Detail
 - Instruction Following
+- ## Annotation Example
+
+![Parking Lot Detection Annotation](parking_lot_annotation_anonymized.png)
+
+*An anonymized illustration of parking lot 3D bounding box annotation.*
