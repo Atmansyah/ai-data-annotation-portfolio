@@ -24,3 +24,8 @@ This project involved floor plan annotation using the Labelbox platform.
 - Attention to Detail
 - Instruction Following
 - Data Quality Assessment
+- ## Annotation Example
+
+![Floor Plan Annotation](floor_plan_polygon_annotation.png)
+
+*Illustrative example of polygon-based door and window annotation. Not an actual project screenshot.*
