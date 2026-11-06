@@ -1,4 +1,4 @@
-# Video Annotation Portfolio
+# Video Annotation 
 ## Egocentric / First-Person Video Annotation
 
 This portfolio demonstrates my experience in first-person video annotation for AI training and evaluation.
