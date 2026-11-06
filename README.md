@@ -25,9 +25,9 @@ This repository showcases my hands-on experience in AI data annotation, image an
 - Human movement and motion data labeling
 - Motion quality assessment
 
-### 4. 3D Parking Lot Annotation
+### 4. LiDAR Point Cloud Annotation
 
-- 3D bounding box annotation
+- Point cloud annotation
 - Parking space detection
 - Object positioning and annotation
 
@@ -49,7 +49,7 @@ This repository showcases my hands-on experience in AI data annotation, image an
 - Image Annotation
 - Video Annotation
 - Egocentric Video Annotation
-- 3D Bounding Box Annotation
+- LiDAR Point Cloud Annotation
 - Robotics Motion Capture
 - AI Response Evaluation
 - Data Quality Assessment
