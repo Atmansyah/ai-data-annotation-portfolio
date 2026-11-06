@@ -6,39 +6,39 @@ This repository showcases my hands-on experience in AI data annotation, image an
 
 ## Project Experience
 
-### 1. Outlier
+### 1. AI Image Annotation & Response Evaluation
 
-**Aether**
 - Image annotation
 - Image description
-- Prompt response
+- Prompt response evaluation
 - AI response and image evaluation based on project guidelines
 
-**Cribbage Tail**
+### 2. Egocentric Video Annotation
+
 - First-person video annotation (egocentric video)
 - Video content review and annotation
+- Visual content understanding
 
-### 2. Sovrano AI
+### 3. Robotics Motion Capture Annotation
 
-**Robotics Motion Capture**
 - Robotics motion capture annotation
 - Human movement and motion data labeling
 - Motion quality assessment
 
-### 3. Chemin
+### 4. 3D Parking Lot Annotation
 
-**Parking Lot Detection**
 - 3D bounding box annotation
 - Parking space detection
 - Object positioning and annotation
 
-**Floor Plan Annotation**
+### 5. Floor Plan Annotation
+
 - Floor plan labeling
 - Spatial data annotation
+- Object and area identification
 
-### 4. ConsultBae
+### 6. Email Data Processing
 
-**Email Collection**
 - Email data collection
 - EML file conversion
 - Email data preparation
@@ -65,9 +65,9 @@ Interested in contributing to AI training, machine learning, and data evaluation
 
 ## Contact
 
-- LinkedIn: [Atmansyah Lubis](https://linkedin.com/in/atmansyah-lubis-669543173)
-- Portfolio: [Remotenesia](https://remotenesia7.wordpress.com/)
+- LinkedIn: https://linkedin.com/in/atmansyah-lubis-669543173
+- Portfolio: https://remotenesia7.wordpress.com/
 
 ## Visual Demonstration
 
-Project samples and visual demonstrations will be added as available.
+Project samples and visual demonstrations are included in the respective project folders.l be added as available.
