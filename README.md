@@ -1,10 +1,10 @@
-# AI Data Annotation Portfolio
+# **𝙰𝙸 𝙳𝚊𝚝𝚊 𝙰𝚗𝚗𝚘𝚝𝚊𝚝𝚒𝚘𝚗 𝙿𝚘𝚛𝚝𝚏𝚘𝚕𝚒𝚘**
 
 Welcome to my AI Data Annotation Portfolio.
 
 This repository showcases my hands-on experience in AI data annotation, image and video annotation, robotics motion capture, and AI response evaluation.
 
-## Project Experience
+## **𝙿𝚛𝚘𝚓𝚎𝚌𝚝 𝙴𝚡𝚙𝚎𝚛𝚒𝚎𝚗𝚌𝚎**
 
 ### 1. AI Image Annotation & Response Evaluation
 
@@ -43,7 +43,7 @@ This repository showcases my hands-on experience in AI data annotation, image an
 - EML file conversion
 - Email data preparation
 
-## Core Skills
+## **𝙲𝚘𝚛𝚎 𝚂𝚔𝚒𝚕𝚕𝚜**
 
 - AI Data Annotation
 - Image Annotation
@@ -55,7 +55,7 @@ This repository showcases my hands-on experience in AI data annotation, image an
 - Data Quality Assessment
 - Data Processing
 
-## About Me
+ **𝙰𝚋𝚘𝚞𝚝 𝙼𝚎**
 
 Native Indonesian speaker (ID-ID) with a background in warehouse operations, inventory control, and quality assurance.
 
@@ -63,11 +63,11 @@ Experienced in AI data annotation, video annotation, robotics motion capture, an
 
 Interested in contributing to AI training, machine learning, and data evaluation projects.
 
-## Contact
+ **𝙲𝚘𝚗𝚝𝚊𝚌𝚝**
 
 - LinkedIn: https://linkedin.com/in/atmansyah-lubis-669543173
-- Portfolio: https://remotenesia7.wordpress.com/
+- Portfolio: https://github.com/Atmansyah?utm
 
-## Visual Demonstration
+## **𝚅𝚒𝚜𝚞𝚊𝚕 𝙳𝚎𝚖𝚘𝚗𝚜𝚝𝚛𝚊𝚝𝚒𝚘𝚗**
 
 Project samples and visual demonstrations are included in the respective project folders.l be added as available.
