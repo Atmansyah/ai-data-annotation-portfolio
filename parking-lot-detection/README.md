@@ -1,5 +1,5 @@
 
-# Parking Lot Detection Annotation
+# LiDar Point Cloud - Parking lot annotation
 
 ## Project Overview
 
