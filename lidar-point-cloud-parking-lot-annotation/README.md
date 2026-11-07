@@ -26,4 +26,9 @@ The objective was to identify and analyze parking spaces and relevant objects in
 - Attention to Detail
 - Instruction Following
 
+ ## Annotation Sample
+
+![LiDAR Point Cloud Annotation](parking_lot_annotation_anonymized.png)
+
+
 
