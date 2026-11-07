@@ -1,4 +1,4 @@
-# FloorPlan Annotation
+# Floor Plan Annotation
 
 ## Project Overview
 
