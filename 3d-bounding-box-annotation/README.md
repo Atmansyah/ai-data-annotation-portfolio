@@ -14,6 +14,8 @@ The task involves identifying relevant objects and placing 3D bounding boxes aro
 - Spatial Annotation
 - Annotation Accuracy and Quality Control
 
+
+
 ## Annotation Example
 
-Visual examples will be added soon.
+![3D Bounding Box Annotation](3d-bounding-box-annotation.png)
