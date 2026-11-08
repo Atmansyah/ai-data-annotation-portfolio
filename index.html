@@ -1,150 +1,306 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atmansyah Lubis | AI Data Annotation & AI Trainer</title>
-<meta name="description" content="Portofolio Atmansyah Lubis - AI Data Annotation, AI Trainer, dan pengalaman 15 tahun di sistem gudang.">
+<title>Atmansyah Lubis | AI Trainer</title>
+<meta name="description" content="Portfolio of Atmansyah Lubis, AI Trainer based in Bekasi, Indonesia. AI data annotation, AI evaluation, robotics motion capture, LiDAR and video annotation, and 15 years of warehouse operations.">
+<meta property="og:title" content="Atmansyah Lubis | AI Data Annotator &amp; AI Trainer">
+<meta property="og:description" content="AI Annotation, AI Evaluation, Robotics, and Video Annotation. Open to Remote Work.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://atmansyah.github.io/ai-data-annotation-portfolio/">
+<meta property="og:image" content="https://atmansyah.github.io/ai-data-annotation-portfolio/social-preview.png">
+<meta property="og:image:alt" content="Atmansyah Lubis - AI Data Annotator &amp; AI Trainer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0f1115; --card:#181b22; --text:#f2f4f8; --muted:#9aa3b2;
-    --a1:#7c5cff; --a2:#22d3ee; --a3:#ff7a59;
+    --bg:#050814; --panel:#0b1330; --panel2:#101a40; --cyan:#3de8ff; --violet:#7c6cff;
+    --text:#e6f0ff; --muted:#9fb1d1; --line:rgba(61,232,255,.22);
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-  nav{position:sticky;top:0;background:rgba(15,17,21,.85);backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid #222733}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-  .logo{width:36px;height:36px;border-radius:50%;background:#000;border:2px solid var(--a1);display:grid;place-items:center;font-weight:700;font-size:13px}
-  nav ul{display:flex;gap:18px;list-style:none;font-size:14px;color:var(--muted)}
-  nav ul a:hover{color:var(--text)}
-  .hero{padding:64px 0 48px;display:grid;gap:28px;align-items:center}
-  @media(min-width:760px){.hero{grid-template-columns:1.2fr 1fr}}
-  .tag{display:inline-block;font-size:13px;color:var(--a2);border:1px solid #22d3ee55;padding:4px 12px;border-radius:99px;margin-bottom:16px}
-  h1{font-size:clamp(32px,7vw,52px);line-height:1.15;margin-bottom:16px}
-  h1 span{background:linear-gradient(90deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lead{color:var(--muted);margin-bottom:24px}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{font-family:var(--sans);color:var(--text);line-height:1.65;font-size:17px;background:var(--bg);
+    background-image:linear-gradient(rgba(61,232,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(61,232,255,.045) 1px,transparent 1px);
+    background-size:44px 44px}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{line-height:1.2;font-weight:700}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(5,8,20,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+  .brand{font-family:var(--mono);font-weight:600;color:var(--cyan);text-decoration:none;white-space:nowrap}
+  nav{overflow-x:auto;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav ul{display:flex;gap:20px;list-style:none;font-size:15px}
+  nav a{color:var(--muted);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover{color:var(--text);border-color:var(--cyan)}
+
+  .hero{padding:72px 0 80px;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 360px at 78% 40%,rgba(124,108,255,.28),transparent 70%),radial-gradient(520px 300px at 20% 20%,rgba(61,232,255,.14),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;gap:40px;align-items:center;position:relative}
+  @media(min-width:800px){.hero .wrap{grid-template-columns:1.3fr 1fr;gap:56px}}
+  .name{font-family:var(--mono);color:var(--cyan);font-size:15px;margin-bottom:14px}
+  .hero h1{font-size:clamp(40px,8vw,66px);font-weight:800;line-height:1.1;margin-bottom:14px}
+  .type{display:inline-block;background:linear-gradient(90deg,#7c5cff,#22d3ee,#ff7a59);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;padding-bottom:.08em}
+  .type::after{content:"";display:inline-block;width:3px;height:.9em;margin-left:6px;vertical-align:-.1em;background:var(--cyan)}
+  .loc{font-family:var(--mono);font-size:14px;color:var(--muted);margin-bottom:22px}
+  .lead{color:#c9d8f0;max-width:56ch;margin-bottom:30px}
   .btns{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px}
-  .btn.p{background:linear-gradient(90deg,var(--a1),var(--a2));color:#0b0d12}
-  .btn.s{border:1px solid #2d3445}
-  .btn:hover{opacity:.9}
-  .avatar{aspect-ratio:1;max-width:320px;width:100%;margin:0 auto;border-radius:24px;background:
-    radial-gradient(circle at 30% 30%,var(--a1),transparent 55%),
-    radial-gradient(circle at 70% 60%,var(--a3),transparent 50%),
-    radial-gradient(circle at 40% 80%,var(--a2),transparent 50%),#14171d;
-    display:grid;place-items:center;font-size:72px;font-weight:800;letter-spacing:2px}
-  section{padding:48px 0}
-  h2{font-size:28px;margin-bottom:8px}
-  .sub{color:var(--muted);margin-bottom:28px}
-  .grid{display:grid;gap:16px}
-  @media(min-width:640px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}}
-  .card{background:var(--card);border:1px solid #232938;border-radius:16px;padding:22px}
-  .card h3{font-size:18px;margin-bottom:6px}
-  .card p{color:var(--muted);font-size:15px}
-  .card .ic{font-size:26px;margin-bottom:10px}
-  .pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:99px;background:#232938;color:var(--a2);margin:12px 6px 0 0}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
-  .stat{background:var(--card);border:1px solid #232938;border-radius:14px;padding:16px;text-align:center}
-  .stat b{display:block;font-size:26px;color:var(--a2)}
-  .stat span{font-size:12px;color:var(--muted)}
-  footer{border-top:1px solid #222733;padding:28px 0;text-align:center;color:var(--muted);font-size:14px}
+  .btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:700;font-size:16px;text-decoration:none;border:1px solid var(--cyan)}
+  .btn.p{background:var(--cyan);color:#04101c}
+  .btn.s{color:var(--cyan)}
+  .btn:hover{box-shadow:0 0 22px rgba(61,232,255,.45)}
+  .frame{width:100%;max-width:340px;aspect-ratio:1/1;margin:0 auto;position:relative;background:var(--panel2);display:grid;place-items:center;border:3px solid var(--cyan);border-radius:50%;overflow:hidden;box-shadow:0 0 40px rgba(61,232,255,.28),0 0 80px rgba(124,108,255,.25)}
+  .frame span{font-size:84px;font-weight:700;color:var(--cyan)}
+  .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  section{padding:68px 0}
+  section.alt{background:rgba(11,19,48,.72);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:32px;margin-bottom:10px}
+  .sub{color:var(--muted);margin-bottom:34px;max-width:62ch}
+  .grid{display:grid;gap:20px}
+  @media(min-width:640px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px;position:relative}
+  .box:hover{border-color:var(--cyan);box-shadow:0 0 24px rgba(61,232,255,.16)}
+  .box h3{font-size:20px;margin-bottom:8px}
+  .box p{color:var(--muted);font-size:16px}
+
+  .about{display:grid;gap:30px}
+  @media(min-width:800px){.about{grid-template-columns:1.4fr 1fr}}
+  .about p+p{margin-top:14px}
+  .about p{color:#c9d8f0}
+  .facts{list-style:none;display:grid;gap:14px}
+  .facts li{border-left:3px solid var(--cyan);padding-left:14px;font-size:16px;color:var(--muted)}
+  .facts b{display:block;color:var(--text)}
+
+  .proj{padding:0;overflow:hidden;display:flex;flex-direction:column}
+  .shot{height:170px;position:relative;background:linear-gradient(135deg,#0b1330,#1b2a6b 65%,#3a2f8f);display:grid;place-items:center;color:var(--cyan);font-weight:700;font-size:20px;padding:12px;text-align:center}
+  .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--panel)}
+  .proj .body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+  .tag{font-family:var(--mono);font-size:12px;color:var(--cyan);border:1px solid var(--line);border-radius:4px;padding:2px 9px}
+  .proj .more{margin-top:auto;font-weight:700;color:var(--cyan);text-decoration:none;border-bottom:2px solid var(--cyan);align-self:flex-start}
+  .proj .more:hover{text-shadow:0 0 12px rgba(61,232,255,.7)}
+
+  #certifications{padding:48px 0 8px}
+  #certifications .sub{margin-bottom:24px}
+  .cert{display:flex;flex-direction:column;padding:20px 22px}
+  .cert h3{font-size:18px}
+  .cert .issuer{font-family:var(--mono);font-size:13px;color:var(--cyan);margin-bottom:16px}
+  .cert .more{margin-top:auto;font-weight:700;color:var(--cyan);text-decoration:none;border-bottom:2px solid var(--cyan);align-self:flex-start}
+  .cert .more:hover{text-shadow:0 0 12px rgba(61,232,255,.7)}
+
+  .job{display:grid;gap:4px;padding:0 0 28px 24px;border-left:2px solid var(--line);position:relative}
+  .job::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+  .job:last-child{padding-bottom:0}
+  .job h3{font-size:20px}
+  .job .org{font-family:var(--mono);font-size:14px;color:var(--cyan)}
+  .job p{color:var(--muted);font-size:16px;max-width:70ch}
+
+  .contact a.box{text-decoration:none;display:block}
+  .contact h3{margin-bottom:4px}
+  footer{border-top:1px solid var(--line);color:var(--muted);text-align:center;padding:28px 0;font-family:var(--mono);font-size:14px}
+
+  @media(prefers-reduced-motion:no-preference){
+    .type{clip-path:inset(0 100% 0 0);animation:reveal 1s steps(10,end) .3s forwards}
+    .type::after{animation:blink 1s steps(1) infinite}
+  }
+  @keyframes reveal{to{clip-path:inset(0 0 0 0)}}
+  @keyframes blink{50%{opacity:0}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<nav>
+<header>
   <div class="wrap">
-    <a class="logo" href="#top">AL</a>
-    <ul>
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#keahlian">Keahlian</a></li>
-      <li><a href="#proyek">Proyek</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
+    <a class="brand" href="#home">AL//</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main class="wrap" id="top">
+<main>
 
-  <div class="hero">
-    <div>
-      <span class="tag">Terbuka untuk proyek baru</span>
-      <h1>Data berkualitas untuk <span>AI yang lebih baik.</span></h1>
-      <p class="lead">Saya Atmansyah Lubis, AI Data Annotator &amp; AI Trainer. Saya menggabungkan ketelitian anotasi data dengan pengalaman 15 tahun di sistem gudang untuk menghasilkan data dan evaluasi yang rapi dan konsisten.</p>
-      <div class="btns">
-        <a class="btn p" href="#kontak">Hubungi Saya</a>
-        <a class="btn s" href="https://github.com/Atmansyah/ai-data-annotation-portfolio" target="_blank" rel="noopener">Lihat Repo</a>
+  <div class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <p class="name">Atmansyah Lubis</p>
+        <h1><span class="type">AI Trainer</span></h1>
+        <p class="loc">Bekasi, West Java, Indonesia &middot; Open to remote work</p>
+        <p class="lead">I label and evaluate data for AI projects. I combine annotation work with 15 years of warehouse operations experience, where accuracy, clear rules, and consistent process matter every day.</p>
+        <div class="btns">
+          <a class="btn p" href="#contact">Contact Me</a>
+          <a class="btn s" href="https://github.com/Atmansyah/ai-data-annotation-portfolio" target="_blank" rel="noopener">View Repository</a>
+        </div>
+      </div>
+      <div class="frame">
+        <span aria-hidden="true">AL</span>
+        <img src="profile.jpg" alt="Portrait of Atmansyah Lubis" onerror="this.remove()">
       </div>
     </div>
-    <div class="avatar">AL</div>
   </div>
 
-  <section id="tentang">
-    <h2>Tentang Saya</h2>
-    <p class="sub">Latar belakang operasional, fokus ke kualitas data.</p>
-    <div class="card">
-      <p>Saya pernah bekerja sebagai freelancer kontrak dan punya 15 tahun pengalaman di bidang gudang. Latar belakang itu membuat saya terbiasa dengan alur kerja yang detail, aturan yang jelas, dan akurasi tinggi, kualitas yang sama pentingnya dalam anotasi dan pelatihan AI.</p>
-      <div class="stats">
-        <div class="stat"><b>15 th</b><span>Pengalaman gudang</span></div>
-        <div class="stat"><b>PII</b><span>Anotasi data</span></div>
-        <div class="stat"><b>AI</b><span>Evaluasi &amp; prompt</span></div>
+  <section id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <p class="sub">An operations background, focused on data quality.</p>
+      <div class="about">
+        <div>
+          <p>I'm a native Indonesian (ID-ID) speaker and AI Trainer with hands-on experience in AI data annotation, video annotation, robotics motion capture, and AI response evaluation.</p>
+          <p>With a background in warehouse operations and inventory management, I bring strong attention to detail, analytical thinking, and quality control skills to AI data projects.</p>
+          <p>I also have experience working with structured annotation guidelines, evaluating AI-generated outputs, and performing data labeling tasks across different project types.</p>
+        </div>
+        <ul class="facts">
+          <li><b>15 years</b>Warehouse operations</li>
+          <li><b>Languages</b>Indonesian (Native), English (Professional reading and writing)</li>
+          <li><b>B.Sc. Accounting</b>Gunadarma University</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="keahlian">
-    <h2>Keahlian</h2>
-    <p class="sub">Yang bisa saya kerjakan.</p>
-    <div class="grid c3">
-      <div class="card"><div class="ic">🏷️</div><h3>Anotasi Data</h3><p>Pelabelan teks dan informasi pribadi (PII) sesuai pedoman, dengan konsistensi tinggi.</p></div>
-      <div class="card"><div class="ic">♻️</div><h3>Klasifikasi Material</h3><p>Pengenalan dan pelabelan kelas material (plastik, kertas, kaca, logam, dll.).</p></div>
-      <div class="card"><div class="ic">🧠</div><h3>Evaluasi &amp; Prompt AI</h3><p>Menyusun prompt dan menguji model berbasis alur kerja nyata, termasuk skenario gudang.</p></div>
-    </div>
-  </section>
-
-  <section id="proyek">
-    <h2>Proyek</h2>
-    <p class="sub">Contoh pekerjaan (tanpa menyebut nama klien).</p>
-    <div class="grid c2">
-      <div class="card">
-        <h3>Anotasi Informasi Pribadi</h3>
-        <p>Menandai kategori informasi pribadi pada postingan media sosial berdasarkan pedoman asosiasi dan aturan rentang anotasi.</p>
-        <span class="pill">PII</span><span class="pill">Guideline</span><span class="pill">Akurasi</span>
-      </div>
-      <div class="card">
-        <h3>Pengenalan Material</h3>
-        <p>Klasifikasi berbagai jenis sampah ke dalam puluhan label kelas dengan aturan yang ketat.</p>
-        <span class="pill">Klasifikasi</span><span class="pill">Visual</span>
-      </div>
-      <div class="card">
-        <h3>Pengumpulan Data &amp; Motion Capture</h3>
-        <p>Berpartisipasi dalam pengumpulan data untuk robotic motion capture.</p>
-        <span class="pill">Data Collection</span><span class="pill">Robotik</span>
-      </div>
-      <div class="card">
-        <h3>Prompt Uji Model: Stock Opname</h3>
-        <p>Merancang prompt berbasis alur kerja gudang untuk menguji batas kemampuan model AI.</p>
-        <span class="pill">Prompt</span><span class="pill">Evaluasi</span><span class="pill">Gudang</span>
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="sub">What I can contribute to your project.</p>
+      <div class="grid g3">
+        <div class="box"><h3>AI Annotation</h3><p>Image, video, 3D bounding box, and LiDAR annotation.</p></div>
+        <div class="box"><h3>AI Evaluation</h3><p>AI response evaluation and data quality assessment.</p></div>
+        <div class="box"><h3>Robotics</h3><p>Motion capture and human movement annotation.</p></div>
+        <div class="box"><h3>Language Tasks</h3><p>Indonesian transcription and language evaluation.</p></div>
+        <div class="box"><h3>Data Management</h3><p>Data processing, reporting, and Microsoft Excel (Intermediate).</p></div>
       </div>
     </div>
   </section>
 
-  <section id="kontak">
-    <h2>Kontak</h2>
-    <p class="sub">Mari berdiskusi soal proyek Anda.</p>
-    <div class="grid c2">
-      <a class="card" href="https://wa.me/6281220802217" target="_blank" rel="noopener"><h3>💬 WhatsApp</h3><p>+62 812-2080-2217</p></a>
-      <a class="card" href="mailto:projectshaco72@gmail.com"><h3>✉️ Email</h3><p>projectshaco72@gmail.com</p></a>
-      <a class="card" href="https://github.com/Atmansyah" target="_blank" rel="noopener"><h3>🐙 GitHub</h3><p>github.com/Atmansyah</p></a>
+  <section id="certifications">
+    <div class="wrap">
+      <h2>Certifications &amp; Training</h2>
+      <p class="sub">Certificates and training I have completed.</p>
+      <div class="grid g3">
+        <div class="box cert">
+          <h3>AI Data &amp; Evaluation Scholar</h3>
+          <p class="issuer">Issued by Sovrano AI</p>
+          <a class="more" href="PASTE_CERTIFICATE_URL_1_HERE" target="_blank" rel="noopener" aria-label="View certificate: AI Data &amp; Evaluation Scholar">View Certificate</a>
+        </div>
+        <div class="box cert">
+          <h3>Data Annotation and Labelling Skill Assessment Certificate</h3>
+          <p class="issuer">Issued by Corpshore AI</p>
+          <a class="more" href="PASTE_CERTIFICATE_URL_2_HERE" target="_blank" rel="noopener" aria-label="View certificate: Data Annotation and Labelling Skill Assessment Certificate">View Certificate</a>
+        </div>
+        <div class="box cert">
+          <h3>Linguistic AI Certification Training</h3>
+          <p class="issuer">Issued by RWS</p>
+          <a class="more" href="PASTE_CERTIFICATE_URL_3_HERE" target="_blank" rel="noopener" aria-label="View certificate: Linguistic AI Certification Training">View Certificate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Project Portfolio</h2>
+      <p class="sub">Examples of my work, without naming clients. Each card links to my GitHub portfolio.</p>
+      <div class="grid g2">
+
+        <article class="box proj">
+          <div class="shot">LiDAR Point Cloud Annotation – Parking Lot<img src="images/lidar-parking-lot.png" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="body">
+            <h3>LiDAR Point Cloud Annotation – Parking Lot</h3>
+            <p>3D object identification, vehicle detection, and point cloud annotation.</p>
+            <div class="tags"><span class="tag">LiDAR</span><span class="tag">3D</span><span class="tag">Point Cloud</span></div>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/parking-lot-detection" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="box proj">
+          <div class="shot">3D Bounding Box Annotation<img src="images/3d-bounding-box.png" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="body">
+            <h3>3D Bounding Box Annotation</h3>
+            <p>3D object localization, bounding box placement, and spatial labeling.</p>
+            <div class="tags"><span class="tag">3D</span><span class="tag">Bounding Box</span><span class="tag">Spatial Labeling</span></div>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="box proj">
+          <div class="shot">First-Person Video Annotation<img src="https://raw.githubusercontent.com/Atmansyah/ai-data-annotation-portfolio/main/egocentric_annotation_demo.png" alt="Egocentric video annotation demo" loading="lazy" onerror="this.remove()"></div>
+          <div class="body">
+            <h3>First-Person Video Annotation</h3>
+            <p>Human activity recognition, object interaction, and movement annotation.</p>
+            <div class="tags"><span class="tag">Video</span><span class="tag">Egocentric</span><span class="tag">Human Activity</span></div>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/video-annotation" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="box proj">
+          <div class="shot">Robotics Motion Capture<img src="images/motion-capture.png" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="body">
+            <h3>Robotics Motion Capture</h3>
+            <p>Human motion tracking, movement annotation, and activity description.</p>
+            <div class="tags"><span class="tag">Robotics</span><span class="tag">Motion Capture</span></div>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/robotics-motion-capture" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+        <article class="box proj">
+          <div class="shot">Floor Plan Annotation<img src="images/floor-plan.png" alt="" loading="lazy" onerror="this.remove()"></div>
+          <div class="body">
+            <h3>Floor Plan Annotation</h3>
+            <p>Room identification, object labeling, and spatial layout annotation.</p>
+            <div class="tags"><span class="tag">Floor Plan</span><span class="tag">Spatial Layout</span></div>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/plan-floor-annotation" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="alt">
+    <div class="wrap">
+      <h2>Work Experience</h2>
+      <p class="sub">Operations experience that shapes how I approach data work.</p>
+      <div>
+        <div class="job">
+          <h3>Warehouse Supervisor</h3>
+          <span class="org">PT Sundaya Indonesia | PT Makanan Sehat Nusantara</span>
+          <p>15 years of warehouse operations experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="sub">Available for remote AI annotation and evaluation projects. Let's talk about yours.</p>
+      <div class="grid g3">
+        <a class="box" href="https://www.linkedin.com/in/atmansyah-lubis-669543173/" target="_blank" rel="noopener"><h3>LinkedIn</h3><p>linkedin.com/in/atmansyah-lubis-669543173</p></a>
+        <a class="box" href="mailto:gjkt.1712@gmail.com"><h3>Email</h3><p>gjkt.1712@gmail.com</p></a>
+        <a class="box" href="https://github.com/Atmansyah" target="_blank" rel="noopener"><h3>GitHub</h3><p>github.com/Atmansyah</p></a>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer>© 2026 Atmansyah Lubis</footer>
+<footer>&copy; 2026 Atmansyah Lubis</footer>
 
 </body>
 </html>
