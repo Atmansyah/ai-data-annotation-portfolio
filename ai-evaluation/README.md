@@ -1,6 +1,10 @@
 
 # AI Evaluation
 
+<p align="center">
+  <img src="ai-evaluation.png" width="700" alt="AI Evaluation Portfolio"/>
+</p>
+
 ## Project Overview
 
 This section showcases hands-on experience in evaluating AI-generated responses and assessing output quality based on task-specific instructions and evaluation guidelines.
