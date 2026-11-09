@@ -1,5 +1,9 @@
 # Language Evaluation
 
+<p align="center">
+  <img src="language-evaluation.png" width="700" alt="Language Evaluation Portfolio"/>
+</p>
+
 ## Project Overview
 
 This section showcases experience in Indonesian language-related AI tasks, including language assessment, text quality review, and evaluation of AI-generated content based on task-specific guidelines.
