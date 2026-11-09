@@ -1,5 +1,9 @@
 # Data Quality Evaluation
 
+<p align="center">
+  <img src="data-quality.png" width="700" alt="Data Quality Evaluation Portfolio"/>
+</p>
+
 ## Project Overview
 
 This section showcases experience in reviewing and assessing data quality to ensure accuracy, consistency, completeness, and compliance with task-specific guidelines.
