@@ -120,7 +120,49 @@
 
 <header>
   <div class="wrap">
-  
+  <!-- ROBOT HEAD LOGO -->
+<style>
+  .robot { display: inline-flex; align-items: center; text-decoration: none; }
+  #robotHead { display: block; width: 44px; height: 44px; transition: transform .08s ease-out; }
+</style>
+
+<a class="robot" href="#home" aria-label="Home">
+  <svg id="robotHead" viewBox="0 0 64 64" aria-hidden="true">
+    <line x1="32" y1="4" x2="32" y2="12" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="32" cy="4" r="3" fill="#ff4d6d"/>
+    <rect x="6" y="28" width="5" height="12" rx="2" fill="#00e5ff"/>
+    <rect x="53" y="28" width="5" height="12" rx="2" fill="#00e5ff"/>
+    <rect x="11" y="12" width="42" height="40" rx="12" fill="#0b1630" stroke="#00e5ff" stroke-width="3"/>
+    <circle cx="24" cy="30" r="7" fill="#ffffff"/>
+    <circle cx="40" cy="30" r="7" fill="#ffffff"/>
+    <circle class="pupil" cx="24" cy="30" r="3.2" fill="#0b1630"/>
+    <circle class="pupil" cx="40" cy="30" r="3.2" fill="#0b1630"/>
+    <rect x="22" y="43" width="20" height="3" rx="1.5" fill="#00e5ff"/>
+  </svg>
+</a>
+
+<script>
+(function () {
+  var head = document.getElementById('robotHead');
+  if (!head) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var pupils = head.querySelectorAll('.pupil');
+
+  document.addEventListener('pointermove', function (e) {
+    var r = head.getBoundingClientRect();
+    var dx = e.clientX - (r.left + r.width / 2);
+    var dy = e.clientY - (r.top + r.height / 2);
+    var dist = Math.hypot(dx, dy) || 1;
+    var k = Math.min(dist / 150, 1);
+    var nx = dx / dist, ny = dy / dist;
+
+    pupils.forEach(function (p) {
+      p.setAttribute('transform', 'translate(' + (nx * k * 3) + ' ' + (ny * k * 3) + ')');
+    });
+    head.style.transform = 'perspective(200px) rotateY(' + (nx * k * 18) + 'deg) rotateX(' + (-ny * k * 18) + 'deg)';
+  });
+})();
+</script>
     <nav aria-label="Main">
       <ul>
         <li><a href="#home">Home</a></li>
