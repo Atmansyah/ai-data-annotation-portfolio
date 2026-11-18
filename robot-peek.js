@@ -7,7 +7,7 @@
 */
 (function () {
   var PHOTO_SELECTORS = [
-    '.hero-photo', '.hero-img', '.profile-photo', '.avatar',
+    '.frame', '.hero-photo', '.hero-img', '.profile-photo', '.avatar',
     '.hero img', '#home img', 'header img'
   ];
   var NS = 'http://www.w3.org/2000/svg';
@@ -45,10 +45,14 @@
     return s;
   }
 
-  function start() {
+  function start(force) {
     var photo = findPhoto();
-    if (!photo) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!photo) { console.warn('robot-peek: foto tidak ditemukan, ubah PHOTO_SELECTORS'); return; }
+    if (force !== true && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (photo.tagName === 'IMG' && photo.parentElement && getComputedStyle(photo.parentElement).overflow !== 'visible') {
+      photo = photo.parentElement;
+    }
+    console.log('robot-peek: foto ditemukan', photo);
 
     var parent = photo.parentElement;
     if (getComputedStyle(parent).position === 'static') parent.style.position = 'relative';
@@ -146,7 +150,7 @@
     requestAnimationFrame(frame);
   }
 
-  window.robotPeek = start;
+  window.robotPeek = function () { start(true); };
   if (document.readyState === 'complete') setTimeout(start, 500);
   else window.addEventListener('load', function () { setTimeout(start, 500); });
 })();
