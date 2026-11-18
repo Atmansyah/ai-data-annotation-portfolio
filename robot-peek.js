@@ -14,11 +14,25 @@
   var TH1 = -40, TH2 = -145, T_END = 9000;
 
   function findPhoto() {
-    for (var i = 0; i < PHOTO_SELECTORS.length; i++) {
-      var el = document.querySelector(PHOTO_SELECTORS[i]);
+    var i, el;
+    for (i = 0; i < PHOTO_SELECTORS.length; i++) {
+      el = document.querySelector(PHOTO_SELECTORS[i]);
       if (el) return el;
     }
-    return null;
+    var all = document.querySelectorAll('img, div, figure');
+    var best = null, bestSize = 0;
+    for (i = 0; i < all.length; i++) {
+      var n = all[i];
+      if (n.closest('nav')) continue;
+      var rc = n.getBoundingClientRect();
+      var ratio = rc.width / (rc.height || 1);
+      if (rc.width < 150 || rc.width > 600 || ratio < 0.85 || ratio > 1.18) continue;
+      if (rc.top > window.innerHeight + window.scrollY) continue;
+      var br = getComputedStyle(n).borderRadius;
+      if (br.indexOf('50%') === -1 && parseFloat(br) < rc.width / 2 - 2) continue;
+      if (rc.width > bestSize) { best = n; bestSize = rc.width; }
+    }
+    return best;
   }
   function cl(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
   function ez(x) { x = cl(x); return x * x * (3 - 2 * x); }
@@ -132,6 +146,7 @@
     requestAnimationFrame(frame);
   }
 
+  window.robotPeek = start;
   if (document.readyState === 'complete') setTimeout(start, 500);
   else window.addEventListener('load', function () { setTimeout(start, 500); });
 })();
