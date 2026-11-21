@@ -115,25 +115,16 @@
   @keyframes blink{50%{opacity:0}}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-  .lang-switch {
+ .lang-switch {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   margin-top: 16px;
 }
-.lang-switch button {
-  background: none;
-  border: 1px solid #00e5ff;
-  color: #00e5ff;
-  padding: 6px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: inherit;
+:where(.lang-switch button) {
+  font: inherit;
   cursor: pointer;
 }
-.lang-switch button:hover {
-  background: rgba(0, 229, 255, 0.15);
-}
-.lang-switch button.active {
+.lang-switch .btn.active {
   background: #00e5ff;
   color: #000;
 }
@@ -212,10 +203,10 @@
           <a class="btn p" href="#contact" data-i18n="btn_contact">Contact Me</a>
           <a class="btn s" href="Atmansyah_Lubis_CV_Master.pdf" download data-i18n="btn_cv">Download CV</a>
         </div>
-                <div class="lang-switch">
-          <button type="button" data-lang="en">English</button>
-          <button type="button" data-lang="id">Indonesia</button>
-        </div>
+       <div class="lang-switch">
+  <button type="button" class="btn s" data-lang="en">English</button>
+  <button type="button" class="btn s" data-lang="id">Indonesia</button>
+</div>
       </div>
       <div class="frame">
   <img src="profile.jpeg" alt="Portrait of Atmansyah Lubis">
