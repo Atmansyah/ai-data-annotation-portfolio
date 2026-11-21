@@ -224,18 +224,18 @@
 
   <section id="about">
     <div class="wrap">
-      <h2>About Me</h2>
-      <p class="sub">An operations background, focused on data quality.</p>
+     <h2 data-i18n="about_title">About Me</h2>
+<p class="sub" data-i18n="about_sub">An operations background, focused on data quality.</p>
       <div class="about">
         <div>
-          <p>I'm a native Indonesian (ID-ID) speaker and AI Trainer with hands-on experience in AI data annotation, video annotation, robotics motion capture, and AI response evaluation.</p>
-          <p>With a background in warehouse operations and inventory management, I bring strong attention to detail, analytical thinking, and quality control skills to AI data projects.</p>
-          <p>I also have experience working with structured annotation guidelines, evaluating AI-generated outputs, and performing data labeling tasks across different project types.</p>
+          <p data-i18n="about_p1">I'm a native Indonesian (ID-ID) speaker and AI Trainer with hands-on experience in AI data annotation, video annotation, robotics motion capture, and AI response evaluation.</p>
+          <p data-i18n="about_p2">With a background in warehouse operations and inventory management, I bring strong attention to detail, analytical thinking, and quality control skills to AI data projects.</p>
+          <p data-i18n="about_p3">I also have experience working with structured annotation guidelines, evaluating AI-generated outputs, and performing data labeling tasks across different project types.</p>
         </div>
         <ul class="facts">
-          <li><b>15 years</b>Warehouse operations</li>
-          <li><b>Languages</b>Indonesian (Native), English (Professional reading and writing)</li>
-          <li><b>B.Sc. Accounting</b>Gunadarma University</li>
+         <li><b data-i18n="fact1_k">15 years</b><span data-i18n="fact1_v">Warehouse operations</span></li>
+<li><b data-i18n="fact2_k">Languages</b><span data-i18n="fact2_v">Indonesian (Native), English (Professional reading and writing)</span></li>
+<li><b data-i18n="fact3_k">B.Sc. Accounting</b><span data-i18n="fact3_v">Gunadarma University</span></li>
         </ul>
       </div>
     </div>
@@ -404,13 +404,25 @@ const dict = {
     nav_experience: "Pengalaman",
     nav_contact: "Kontak",
     hero_loc: "Bekasi, Jawa Barat, Indonesia · Terbuka untuk kerja remote",
-    hero_desc: "Saya melabeli dan mengevaluasi data untuk proyek AI. Saya menggabungkan pekerjaan anotasi dengan 15 tahun pengalaman operasional gudang, di mana akurasi, aturan yang jelas, dan proses yang konsisten penting setiap hari."
+    hero_desc: "Saya melabeli dan mengevaluasi data untuk proyek AI. Saya menggabungkan pekerjaan anotasi dengan 15 tahun pengalaman operasional gudang, di mana akurasi, aturan yang jelas, dan proses yang konsisten penting setiap hari.",
+        about_title: "Tentang Saya",
+    about_sub: "Latar belakang operasional, berfokus pada kualitas data.",
+    fact1_k: "15 tahun",
+    fact1_v: "Operasional gudang",
+    fact2_k: "Bahasa",
+    fact2_v: "Indonesia (bahasa ibu), Inggris (membaca dan menulis tingkat profesional)",
+    fact3_k: "S1 Akuntansi",
+    fact3_v: "Universitas Gunadarma",
+    about_p1: "Saya penutur asli bahasa Indonesia (ID-ID) dan AI Trainer dengan pengalaman langsung di anotasi data AI, anotasi video, motion capture robotik, dan evaluasi respons AI.",
+    about_p2: "Dengan latar belakang operasional gudang dan manajemen persediaan, saya membawa perhatian tinggi pada detail, cara berpikir analitis, dan keterampilan pengendalian kualitas ke proyek data AI.",
+    about_p3: "Saya juga berpengalaman bekerja dengan panduan anotasi terstruktur, mengevaluasi keluaran yang dihasilkan AI, dan melakukan tugas pelabelan data pada berbagai jenis proyek."
   }
 };
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(function (el) {
-    var text = dict[lang][el.dataset.i18n];
+    if (!el.hasAttribute('data-en')) el.setAttribute('data-en', el.textContent);
+    var text = lang === 'en' ? el.getAttribute('data-en') : dict.id[el.dataset.i18n];
     if (text) el.textContent = text;
   });
   document.querySelectorAll('.lang-switch button').forEach(function (b) {
