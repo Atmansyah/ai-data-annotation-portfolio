@@ -188,12 +188,12 @@
 </script>
     <nav aria-label="Main">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" data-i18n="nav_about">About Me</a></li>
+        <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="#experience" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -206,8 +206,8 @@
       <div>
         <p class="name">Atmansyah Lubis <span role="img" aria-label="Bendera Indonesia" style="display:inline-block;width:22px;height:15px;margin-left:8px;vertical-align:-2px;border-radius:2px;background:linear-gradient(to bottom,#e70011 50%,#ffffff 50%);box-shadow:0 0 0 1px rgba(255,255,255,0.25);"></span></p>
         <h1><span class="type">AI Trainer</span></h1>
-        <p class="loc">Bekasi, West Java, Indonesia &middot; Open to remote work</p>
-        <p class="lead">I label and evaluate data for AI projects. I combine annotation work with 15 years of warehouse operations experience, where accuracy, clear rules, and consistent process matter every day.</p>
+        <p class="loc" data-i18n="hero_loc">Bekasi, West Java, Indonesia &middot; Open to remote work</p>
+        <p class="lead" data-i18n="hero_desc">I label and evaluate data for AI projects. I combine annotation work with 15 years of warehouse operations experience, where accuracy, clear rules, and consistent process matter every day.</p>
         <div class="btns">
           <a class="btn p" href="#contact" data-i18n="btn_contact">Contact Me</a>
           <a class="btn s" href="Atmansyah_Lubis_CV_Master.pdf" download data-i18n="btn_cv">Download CV</a>
@@ -380,19 +380,34 @@
 
 <footer>&copy; 2026 Atmansyah Lubis</footer>
 <script src="robot-peek.js" defer></script>
-</body>
-  <script>
+ </body>
+<script>
 const dict = {
   en: {
     btn_contact: "Contact Me",
-    btn_cv: "Download CV"
+    btn_cv: "Download CV",
+    nav_home: "Home",
+    nav_about: "About Me",
+    nav_skills: "Skills",
+    nav_projects: "Projects",
+    nav_experience: "Experience",
+    nav_contact: "Contact",
+    hero_loc: "Bekasi, West Java, Indonesia · Open to remote work",
+    hero_desc: "I label and evaluate data for AI projects. I combine annotation work with 15 years of warehouse operations experience, where accuracy, clear rules, and consistent process matter every day."
   },
   id: {
     btn_contact: "Hubungi Saya",
-    btn_cv: "Unduh CV"
+    btn_cv: "Unduh CV",
+    nav_home: "Beranda",
+    nav_about: "Tentang Saya",
+    nav_skills: "Keahlian",
+    nav_projects: "Proyek",
+    nav_experience: "Pengalaman",
+    nav_contact: "Kontak",
+    hero_loc: "Bekasi, Jawa Barat, Indonesia · Terbuka untuk kerja remote",
+    hero_desc: "Saya melabeli dan mengevaluasi data untuk proyek AI. Saya menggabungkan pekerjaan anotasi dengan 15 tahun pengalaman operasional gudang, di mana akurasi, aturan yang jelas, dan proses yang konsisten penting setiap hari."
   }
 };
-
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(function (el) {
