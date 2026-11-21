@@ -114,7 +114,30 @@
   @keyframes reveal{to{clip-path:inset(0 0 0 0)}}
   @keyframes blink{50%{opacity:0}}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+
+  .lang-switch {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.lang-switch button {
+  background: none;
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.lang-switch button:hover {
+  background: rgba(0, 229, 255, 0.15);
+}
+.lang-switch button.active {
+  background: #00e5ff;
+  color: #000;
+}
+  </style>
 </head>
 <body>
 
