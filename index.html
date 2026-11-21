@@ -381,4 +381,36 @@
 <footer>&copy; 2026 Atmansyah Lubis</footer>
 <script src="robot-peek.js" defer></script>
 </body>
+  <script>
+const dict = {
+  en: {
+    btn_contact: "Contact Me",
+    btn_cv: "Download CV"
+  },
+  id: {
+    btn_contact: "Hubungi Saya",
+    btn_cv: "Unduh CV"
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var text = dict[lang][el.dataset.i18n];
+    if (text) el.textContent = text;
+  });
+  document.querySelectorAll('.lang-switch button').forEach(function (b) {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+}
+
+document.querySelectorAll('.lang-switch button').forEach(function (b) {
+  b.addEventListener('click', function () { setLang(b.dataset.lang); });
+});
+
+var saved = 'en';
+try { saved = localStorage.getItem('lang') || 'en'; } catch (e) {}
+setLang(saved);
+</script>
 </html>
