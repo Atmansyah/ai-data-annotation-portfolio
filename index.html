@@ -243,17 +243,17 @@
 
   <section id="skills" class="alt">
     <div class="wrap">
-      <h2>Skills</h2>
-      <p class="sub">What I can contribute to your project.</p>
-      <div class="grid g3">
-        <div class="box"><h3>AI Annotation</h3><p>Image, video, 3D bounding box, and LiDAR annotation.</p></div>
-        <div class="box"><h3>AI Evaluation</h3><p>AI response evaluation and data quality assessment.</p></div>
-        <div class="box"><h3>Robotics</h3><p>Motion capture and human movement annotation.</p></div>
-        <div class="box"><h3>Language Tasks</h3><p>Indonesian transcription and language evaluation.</p></div>
-        <div class="box"><h3>Data Management</h3><p>Data processing, reporting, and Microsoft Excel (Intermediate).</p></div>
+     <h2 data-i18n="skills_title">Skills</h2>
+<p class="sub" data-i18n="skills_sub">What I can contribute to your project.</p>
+<div class="grid g3">
+  <div class="box"><h3 data-i18n="sk1_t">AI Annotation</h3><p data-i18n="sk1_d">Image, video, 3D bounding box, and LiDAR annotation.</p></div>
+  <div class="box"><h3 data-i18n="sk2_t">AI Evaluation</h3><p data-i18n="sk2_d">AI response evaluation and data quality assessment.</p></div>
+  <div class="box"><h3 data-i18n="sk3_t">Robotics</h3><p data-i18n="sk3_d">Motion capture and human movement annotation.</p></div>
+  <div class="box"><h3 data-i18n="sk4_t">Language Tasks</h3><p data-i18n="sk4_d">Indonesian transcription and language evaluation.</p></div>
+  <div class="box"><h3 data-i18n="sk5_t">Data Management</h3><p data-i18n="sk5_d">Data processing, reporting, and Microsoft Excel (Intermediate).</p></div>
+       </div>
       </div>
-    </div>
-  </section>
+      </section>
 
   <section id="certifications">
     <div class="wrap">
@@ -415,7 +415,19 @@ const dict = {
     fact3_v: "Universitas Gunadarma",
     about_p1: "Saya penutur asli bahasa Indonesia (ID-ID) dan AI Trainer dengan pengalaman langsung di anotasi data AI, anotasi video, motion capture robotik, dan evaluasi respons AI.",
     about_p2: "Dengan latar belakang operasional gudang dan manajemen persediaan, saya membawa perhatian tinggi pada detail, cara berpikir analitis, dan keterampilan pengendalian kualitas ke proyek data AI.",
-    about_p3: "Saya juga berpengalaman bekerja dengan panduan anotasi terstruktur, mengevaluasi keluaran yang dihasilkan AI, dan melakukan tugas pelabelan data pada berbagai jenis proyek."
+    about_p3: "Saya juga berpengalaman bekerja dengan panduan anotasi terstruktur, mengevaluasi keluaran yang dihasilkan AI, dan melakukan tugas pelabelan data pada berbagai jenis proyek.",
+        skills_title: "Keahlian",
+    skills_sub: "Apa yang bisa saya kontribusikan untuk proyek Anda.",
+    sk1_t: "Anotasi AI",
+    sk1_d: "Anotasi gambar, video, bounding box 3D, dan LiDAR.",
+    sk2_t: "Evaluasi AI",
+    sk2_d: "Evaluasi respons AI dan penilaian kualitas data.",
+    sk3_t: "Robotika",
+    sk3_d: "Motion capture dan anotasi gerakan manusia.",
+    sk4_t: "Tugas Bahasa",
+    sk4_d: "Transkripsi bahasa Indonesia dan evaluasi bahasa.",
+    sk5_t: "Manajemen Data",
+    sk5_d: "Pemrosesan data, pelaporan, dan Microsoft Excel (tingkat menengah)."
   }
 };
 function setLang(lang) {
