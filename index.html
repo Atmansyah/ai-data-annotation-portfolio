@@ -291,15 +291,15 @@
 
   <section id="projects">
     <div class="wrap">
-      <h2>Project Portfolio</h2>
-      <p class="sub">Examples of my work, without naming clients. Each card links to my GitHub portfolio.</p>
+     <h2 data-i18n="proj_title">Project Portfolio</h2>
+     <p class="sub" data-i18n="proj_sub">Examples of my work, without naming clients. Each card links to my GitHub portfolio.</p>
       <div class="grid g2">
 
         <article class="box proj">
           <div class="shot">LiDAR Point Cloud Annotation – Parking Lot<img src="images/lidar-parking-lot.png" alt="" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
             <h3>LiDAR Point Cloud Annotation – Parking Lot</h3>
-            <p>3D object identification, vehicle detection, and point cloud annotation.</p>
+            <p data-i18n="pj1_d">3D object identification, vehicle detection, and point cloud annotation.</p>
             <div class="tags"><span class="tag">LiDAR</span><span class="tag">3D</span><span class="tag">Point Cloud</span></div>
             <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/lidar-point-cloud-parking-lot-annotation" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -309,7 +309,7 @@
           <div class="shot">3D Bounding Box Annotation<img src="images/3d-bounding-box.png" alt="" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
             <h3>3D Bounding Box Annotation</h3>
-            <p>3D object localization, bounding box placement, and spatial labeling.</p>
+            <p data-i18n="pj2_d">3D object localization, bounding box placement, and spatial labeling.</p>
             <div class="tags"><span class="tag">3D</span><span class="tag">Bounding Box</span><span class="tag">Spatial Labeling</span></div>
             <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/3d-bounding-box-annotation" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -319,7 +319,7 @@
           <div class="shot">First-Person Video Annotation<img src="https://raw.githubusercontent.com/Atmansyah/ai-data-annotation-portfolio/main/egocentric_annotation_demo.png" alt="Egocentric video annotation demo" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
             <h3>First-Person Video Annotation</h3>
-            <p>Human activity recognition, object interaction, and movement annotation.</p>
+            <p data-i18n="pj3_d">Human activity recognition, object interaction, and movement annotation.</p>
             <div class="tags"><span class="tag">Video</span><span class="tag">Egocentric</span><span class="tag">Human Activity</span></div>
             <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/video-annotation" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -329,7 +329,7 @@
           <div class="shot">Robotics Motion Capture<img src="images/motion-capture.png" alt="" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
             <h3>Robotics Motion Capture</h3>
-            <p>Human motion tracking, movement annotation, and activity description.</p>
+            <p data-i18n="pj4_d">Human motion tracking, movement annotation, and activity description.</p>
             <div class="tags"><span class="tag">Robotics</span><span class="tag">Motion Capture</span></div>
             <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/robotics-motion-capture" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -339,9 +339,9 @@
           <div class="shot">Floor Plan Annotation<img src="images/floor-plan.png" alt="" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
             <h3>Floor Plan Annotation</h3>
-            <p>Room identification, object labeling, and spatial layout annotation.</p>
+            <p data-i18n="pj5_d">Room identification, object labeling, and spatial layout annotation.</p>
             <div class="tags"><span class="tag">Floor Plan</span><span class="tag">Spatial Layout</span></div>
-            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/plan-floor-annotation" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="more" href="https://github.com/Atmansyah/ai-data-annotation-portfolio/tree/main/plan-floor-annotation" target="_blank" rel="noopener" data-i18n="view_gh">View on GitHub</a>
           </div>
         </article>
 
@@ -433,7 +433,15 @@ const dict = {
     by_sovrano: "Diterbitkan oleh Sovrano AI",
     by_corpshore: "Diterbitkan oleh Corpshore AI",
     by_rws: "Diterbitkan oleh RWS",
-    by_mercor: "Diterbitkan oleh Mercor"
+    by_mercor: "Diterbitkan oleh Mercor",
+        proj_title: "Portofolio Proyek",
+    proj_sub: "Contoh pekerjaan saya, tanpa menyebut nama klien. Setiap kartu terhubung ke portofolio GitHub saya.",
+    pj1_d: "Identifikasi objek 3D, deteksi kendaraan, dan anotasi point cloud.",
+    pj2_d: "Lokalisasi objek 3D, penempatan bounding box, dan pelabelan spasial.",
+    pj3_d: "Pengenalan aktivitas manusia, interaksi objek, dan anotasi gerakan.",
+    pj4_d: "Pelacakan gerakan manusia, anotasi gerakan, dan deskripsi aktivitas.",
+    pj5_d: "Identifikasi ruangan, pelabelan objek, dan anotasi tata letak spasial.",
+    view_gh: "Lihat di GitHub"
   }
 };
 function setLang(lang) {
