@@ -1,6 +1,6 @@
 /*
   robot-peek.js
-  Robot kecil mengintip dari balik foto profil (hero), diputar sekali saat halaman dibuka.
+  Robot Mercor kecil mengintip dari balik foto profil (hero), diputar sekali saat halaman dibuka.
   Cara pakai: simpan di root repo, lalu tambahkan sebelum </body> di index.html:
     <script src="robot-peek.js" defer></script>
   Kalau robot tidak muncul, ubah PHOTO_SELECTORS di bawah supaya cocok dengan foto di hero.
@@ -68,19 +68,26 @@
 
     var back = makeSvg(pr.width, pr.height, 0);
     back.innerHTML =
+      '<defs>' +
+      '<linearGradient id="rp-head" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f4ff"/><stop offset="1" stop-color="#cfd0f5"/></linearGradient>' +
+      '<linearGradient id="rp-face" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6a63f0"/><stop offset="1" stop-color="#4a41d8"/></linearGradient>' +
+      '</defs>' +
       '<g id="rp-bot"><g transform="scale(' + (1.5 * k) + ')">' +
-      '<rect x="-9" y="-27" width="18" height="17" rx="3" fill="#0a0e17" stroke="#22d3ee" stroke-width="2"/>' +
-      '<rect x="-8" y="-42" width="16" height="13" rx="4" fill="#0a0e17" stroke="#22d3ee" stroke-width="2"/>' +
-      '<circle cx="-4" cy="-36" r="2.8" fill="#e0f7ff"/><circle cx="4" cy="-36" r="2.8" fill="#e0f7ff"/>' +
-      '<circle id="rp-pl" cx="-4" cy="-36" r="1.4" fill="#0a0e17"/><circle id="rp-pr" cx="4" cy="-36" r="1.4" fill="#0a0e17"/>' +
-      '<line x1="0" y1="-42" x2="0" y2="-47" stroke="#22d3ee" stroke-width="2"/>' +
-      '<circle id="rp-ant" cx="0" cy="-48" r="2.2" fill="#fbbf24"/>' +
+      '<rect x="-8" y="-26" width="16" height="18" rx="6" fill="#cfd0f5"/>' +
+      '<line x1="0" y1="-44" x2="0" y2="-49" stroke="#8f8af2" stroke-width="1.6" stroke-linecap="round"/>' +
+      '<circle id="rp-ant" cx="0" cy="-51" r="2.6" fill="#5b52e8"/>' +
+      '<rect x="-18" y="-38" width="4" height="10" rx="2" fill="#5b52e8"/>' +
+      '<rect x="14" y="-38" width="4" height="10" rx="2" fill="#5b52e8"/>' +
+      '<rect x="-14" y="-44" width="28" height="23" rx="8" fill="url(#rp-head)"/>' +
+      '<rect x="-10" y="-40" width="20" height="14" rx="4.5" fill="url(#rp-face)"/>' +
+      '<circle id="rp-pl" cx="-4" cy="-33.5" r="2.4" fill="#fff"/><circle id="rp-pr" cx="4" cy="-33.5" r="2.4" fill="#fff"/>' +
+      '<path d="M-2.5 -29.5 Q0 -27 2.5 -29.5" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>' +
       '</g></g>';
     var front = makeSvg(pr.width, pr.height, 2);
     front.innerHTML =
       '<g id="rp-hands" opacity="0"><g transform="scale(' + k + ')">' +
-      '<circle id="rp-hl" cx="-18" cy="0" r="5" fill="#22d3ee"/>' +
-      '<circle id="rp-hr" cx="18" cy="0" r="5" fill="#7F77DD"/>' +
+      '<circle id="rp-hl" cx="-18" cy="0" r="5" fill="#cfd0f5"/>' +
+      '<circle id="rp-hr" cx="18" cy="0" r="5" fill="#5b52e8"/>' +
       '</g></g>';
     parent.insertBefore(back, photo);
     parent.appendChild(front);
@@ -122,7 +129,7 @@
         else if (t < 8700) p = 1 - ez((t - 8200) / 500);
         if (t >= 5800 && t < 6800) lx = 2.6 * Math.sin((t - 5800) / 260);
         else if (t >= 7300 && t < 8200) {
-          eyeS = 1.3;
+          eyeS = 1.25;
           if (t < 7800) sway = Math.sin(t / 40) * 4;
         }
       }
@@ -133,11 +140,11 @@
       bot.setAttribute('transform',
         'translate(' + (cx + dx * r0).toFixed(1) + ' ' + (cy + dy * r0).toFixed(1) + ') rotate(' + (th + 90 + sway).toFixed(1) + ')');
       bot.setAttribute('opacity', p > 0 ? 1 : 0);
-      pL.setAttribute('cx', -4 + lx * 0.5);
-      pR.setAttribute('cx', 4 + lx * 0.5);
-      pL.setAttribute('r', 1.4 * eyeS);
-      pR.setAttribute('r', 1.4 * eyeS);
-      ant.setAttribute('fill', Math.floor(t / 300) % 2 ? '#fbbf24' : '#fde68a');
+      pL.setAttribute('cx', -4 + lx * 0.6);
+      pR.setAttribute('cx', 4 + lx * 0.6);
+      pL.setAttribute('r', 2.4 * eyeS);
+      pR.setAttribute('r', 2.4 * eyeS);
+      ant.setAttribute('fill', Math.floor(t / 300) % 2 ? '#5b52e8' : '#8f8af2');
 
       hands.setAttribute('transform',
         'translate(' + (cx + dx * 88 * k).toFixed(1) + ' ' + (cy + dy * 88 * k).toFixed(1) + ') rotate(' + (th + 90) + ')');
