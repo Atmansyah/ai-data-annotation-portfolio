@@ -142,46 +142,62 @@
 
 <header>
   <div class="wrap">
-  <!-- ROBOT HEAD LOGO -->
-<style>
-  .robot { display: inline-flex; align-items: center; text-decoration: none; }
-  #robotHead { display: block; width: 44px; height: 44px; transition: transform .08s ease-out; }
-</style>
-
-<a class="robot" href="#home" aria-label="Home">
-  <svg id="robotHead" viewBox="0 0 64 64" aria-hidden="true">
-    <line x1="32" y1="4" x2="32" y2="12" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="32" cy="4" r="3" fill="#ff4d6d"/>
-    <rect x="6" y="28" width="5" height="12" rx="2" fill="#00e5ff"/>
-    <rect x="53" y="28" width="5" height="12" rx="2" fill="#00e5ff"/>
-    <rect x="11" y="12" width="42" height="40" rx="12" fill="#0b1630" stroke="#00e5ff" stroke-width="3"/>
-    <circle cx="24" cy="30" r="7" fill="#ffffff"/>
-    <circle cx="40" cy="30" r="7" fill="#ffffff"/>
-    <circle class="pupil" cx="24" cy="30" r="3.2" fill="#0b1630"/>
-    <circle class="pupil" cx="40" cy="30" r="3.2" fill="#0b1630"/>
-    <rect x="22" y="43" width="20" height="3" rx="1.5" fill="#00e5ff"/>
+ <a href="#home" class="robot-logo" aria-label="Home">
+  <svg id="robotLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="56" height="56">
+    <defs>
+      <linearGradient id="rl-head" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f4f4ff"/><stop offset="1" stop-color="#cfd0f5"/>
+      </linearGradient>
+      <linearGradient id="rl-face" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#6a63f0"/><stop offset="1" stop-color="#4a41d8"/>
+      </linearGradient>
+    </defs>
+    <g transform="rotate(-6 50 55)">
+      <line x1="50" y1="14" x2="50" y2="26" stroke="#8f8af2" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="50" cy="11" r="6" fill="#5b52e8"/>
+      <rect x="6" y="45" width="9" height="22" rx="4.5" fill="#5b52e8"/>
+      <rect x="85" y="45" width="9" height="22" rx="4.5" fill="#5b52e8"/>
+      <rect x="12" y="24" width="76" height="62" rx="24" fill="url(#rl-head)"/>
+      <rect x="22" y="38" width="56" height="34" rx="11" fill="url(#rl-face)"/>
+      <g id="rlEyes">
+        <circle class="rl-eye" cx="38" cy="55" r="5.5" fill="#fff"/>
+        <circle class="rl-eye" cx="62" cy="55" r="5.5" fill="#fff"/>
+      </g>
+      <path id="rlSmile" d="M45 61 Q50 66 55 61" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+    </g>
   </svg>
 </a>
 
+<style>
+  .robot-logo{display:inline-flex;align-items:center;text-decoration:none}
+  .rl-eye{transform-box:fill-box;transform-origin:center;animation:rl-blink 5s infinite}
+  @keyframes rl-blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+</style>
+
 <script>
 (function () {
-  var head = document.getElementById('robotHead');
-  if (!head) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var pupils = head.querySelectorAll('.pupil');
-
-  document.addEventListener('pointermove', function (e) {
-    var r = head.getBoundingClientRect();
-    var dx = e.clientX - (r.left + r.width / 2);
-    var dy = e.clientY - (r.top + r.height / 2);
+  var svg = document.getElementById('robotLogo');
+  var eyes = document.getElementById('rlEyes');
+  var smile = document.getElementById('rlSmile');
+  if (!svg || !eyes) return;
+  var MAX_EYE = 4, MAX_SMILE = 1.5;
+  function look(x, y) {
+    var r = svg.getBoundingClientRect();
+    var dx = x - (r.left + r.width / 2);
+    var dy = y - (r.top + r.height / 2);
     var dist = Math.hypot(dx, dy) || 1;
     var k = Math.min(dist / 150, 1);
-    var nx = dx / dist, ny = dy / dist;
-
-    pupils.forEach(function (p) {
-      p.setAttribute('transform', 'translate(' + (nx * k * 3) + ' ' + (ny * k * 3) + ')');
-    });
-    head.style.transform = 'perspective(200px) rotateY(' + (nx * k * 18) + 'deg) rotateX(' + (-ny * k * 18) + 'deg)';
+    var ux = dx / dist, uy = dy / dist;
+    eyes.setAttribute('transform', 'translate(' + (ux * MAX_EYE * k).toFixed(2) + ' ' + (uy * MAX_EYE * k).toFixed(2) + ')');
+    smile.setAttribute('transform', 'translate(' + (ux * MAX_SMILE * k).toFixed(2) + ' ' + (uy * MAX_SMILE * k).toFixed(2) + ')');
+  }
+  document.addEventListener('mousemove', function (e) { look(e.clientX, e.clientY); });
+  document.addEventListener('touchmove', function (e) {
+    var t = e.touches[0]; if (t) look(t.clientX, t.clientY);
+  }, { passive: true });
+  document.addEventListener('mouseleave', function () {
+    eyes.setAttribute('transform', 'translate(0 0)');
+    smile.setAttribute('transform', 'translate(0 0)');
   });
 })();
 </script>
