@@ -136,7 +136,11 @@
   text-align: center;
   justify-content: center;
 }
-  </style>
+.co-toggle{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;border-bottom:1px dashed currentColor}
+.co-panel{margin-top:12px;max-width:680px}
+.co-imgs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.co-imgs img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;border:1px solid #1c2a4a}
+</style>
 </head>
 <body>
 
@@ -394,8 +398,15 @@
       <div>
         <div class="job">
           <h3>Warehouse Supervisor</h3>
-          <span class="org">PT Sundaya Indonesia | PT Makanan Sehat Nusantara</span>
+          <span class="org"><button class="co-toggle" aria-expanded="false" aria-controls="exp-sundaya">PT Sundaya Indonesia ▾</button> | PT Makanan Sehat Nusantara</span>
           <p data-i18n="exp_d">15 years of warehouse operations experience.</p> 
+          <div class="co-panel" id="exp-sundaya" hidden>
+  <div class="co-imgs">
+    <img src="experience/gudang-1.jpg" alt="Warehouse area at PT Sundaya Indonesia" loading="lazy">
+    <img src="experience/gudang-2.jpg" alt="Warehouse stock handling at PT Sundaya Indonesia" loading="lazy">
+  </div>
+  <p data-i18n="exp1_detail">Managed warehouse operations, monitored stock, and led the field team.</p>
+</div>
         </div>
       </div>
     </div>
@@ -417,6 +428,16 @@
 
 <footer>&copy; 2026 Atmansyah Lubis</footer>
 <script src="robot-peek.js" defer></script>
+  <script>
+document.querySelectorAll('.co-toggle').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var p = document.getElementById(b.getAttribute('aria-controls'));
+    var open = p.hasAttribute('hidden');
+    if (open) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
+    b.setAttribute('aria-expanded', open);
+  });
+});
+</script>
  </body>
 <script>
 const dict = {
@@ -473,6 +494,7 @@ const dict = {
     by_rws: "Diterbitkan oleh RWS",
     by_mercor: "Diterbitkan oleh Mercor",
     by_openai: "Diterbitkan oleh OpenAI",
+    exp1_detail: "Mengelola operasional gudang, memantau stok, dan memimpin tim lapangan.",
         proj_title: "Portofolio Proyek",
     proj_sub: "Contoh pekerjaan saya, tanpa menyebut nama klien. Setiap kartu terhubung ke portofolio GitHub saya.",
     pj1_d: "Identifikasi objek 3D, deteksi kendaraan, dan anotasi point cloud.",
